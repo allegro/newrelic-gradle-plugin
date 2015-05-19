@@ -1,0 +1,5 @@
+.gradle/
+.idea/
+/build/
+
+newrelic-gradle-plugin.iml

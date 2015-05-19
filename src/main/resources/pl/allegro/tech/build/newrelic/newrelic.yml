@@ -1,0 +1,56 @@
+common: &default_settings
+
+  license_key: '${licenseKey}'
+  agent_enabled: true
+  high_security: false
+  enable_auto_app_naming: false
+  enable_auto_transaction_naming: true
+  log_level: info
+  audit_mode: false
+  log_file_count: 1
+  log_limit_in_kbytes: 100000
+  log_daily: false
+  log_file_name: newrelic_agent.log
+  ssl: true
+  max_stack_trace_lines: 100
+
+  attributes:
+    enabled: true
+
+  transaction_tracer:
+    enabled: true
+    transaction_threshold: apdex_f
+    record_sql: obfuscated
+    log_sql: false
+    stack_trace_threshold: 0.5
+    explain_enabled: true
+    explain_threshold: 0.5
+    top_n: 20
+
+  error_collector:
+    enabled: true
+
+  analytics_events:
+    enabled: true
+    max_samples_stored: 2000
+
+  cross_application_tracer:
+    enabled: true
+
+  thread_profiler:
+    enabled: true
+
+  browser_monitoring:
+    auto_instrument: false
+
+  class_transformer:
+    com.newrelic.instrumentation.servlet-user:
+      enabled: false
+
+test:
+  <<: *default_settings
+  app_name: ${projectName} (Test)
+
+prod:
+  <<: *default_settings
+  app_name: ${projectName} (Prod)
