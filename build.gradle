@@ -30,6 +30,9 @@ repositories {
 sourceCompatibility = '1.8'
 
 dependencies {
+    compile gradleApi()
+    compile localGroovy()
+
     compile group: 'jline', name: 'jline', version: '2.12'
 
     testCompile(group: 'org.spockframework', name: 'spock-core', version: '0.7-groovy-2.0') {
@@ -40,6 +43,10 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2'
 }
+
+
+group = 'pl.allegro.tech.build'
+version = scmVersion.version
 
 pluginBundle {
     website = 'https://github.com/allegro/newrelic-gradle-plugin'
