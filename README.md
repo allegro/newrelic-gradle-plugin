@@ -10,14 +10,16 @@ This plugin facilitates the integration of your app with [NewRelic] (http://newr
 ```
 buildscript {
     repositories {
-        mavenCentral()
+         maven {
+            url "https://plugins.gradle.org/m2/"
+         }
     }
     dependencies {
-        classpath group: 'pl.allegro.tech.build', name: 'newrelic-gradle-plugin', version: '1.0.0'
+        classpath group: 'pl.allegro.tech.build', name: 'newrelic-gradle-plugin', version: '0.1.0'
     }
 }
 apply plugin: 'application'
-apply plugin: 'newrelic'
+apply plugin: 'pl.allegro.tech.build.newrelic-gradle-plugin'
 
 newrelic {
     licenseKey '#1231afa2441251asda' //required - newrelic account key
