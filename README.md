@@ -37,7 +37,7 @@ Finally this file should be placed on root classpath of your built application.
 
 ## Requirements
 * newrelic-gradle-plugin must be applied after application plugin.
-* environment must be pointed by setting -Dnewrelic.environment= on the Java startup command 
+* environment must be pointed by setting -Dnewrelic.environment= on the Java startup command. By default the plugin contains configuration for two environments: "prod" and "test".
 
 ## License
 
