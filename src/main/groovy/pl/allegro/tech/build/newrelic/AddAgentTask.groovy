@@ -8,9 +8,15 @@ class AddAgentTask extends DefaultTask {
 
     @TaskAction
     void addNewrelic() {
-        project.applicationDefaultJvmArgs += [
-                "-javaagent:../lib/${NewrelicPlugin.NEWRELIC_AGENT_NAME}-${project.extensions.newrelic.version}.jar"
-        ]
+        if (!project.extensions.newrelic.disableDefaultJvmArgs) {
+            project.applicationDefaultJvmArgs += [
+                    '-javaagent:' +
+                            project.extensions.newrelic.libDir +
+                            NewrelicPlugin.NEWRELIC_AGENT_NAME +
+                            '-' +
+                            project.extensions.newrelic.version + '.jar'
+            ]
+        }
     }
 
 }
