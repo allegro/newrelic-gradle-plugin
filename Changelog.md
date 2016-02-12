@@ -5,7 +5,7 @@
 New configuration options
 
 libDir = "../lib" # default 
-disableDefaultJvmArgs = false # default
+loadNewRelicAgent = true # default
 
 If you're running the application from a different directory the project/bin
 
@@ -21,7 +21,7 @@ To disable changing the DEFAULT_JVM_OPTS use
 ```
 newrelic {
     ...
-    disableDefaultJvmArgs true
+    loadNewRelicAgent false
 }
 ```
 newrelic.yml will still be placed in the project/lib/

@@ -36,7 +36,7 @@ class NewrelicPluginSpec extends Specification {
         project.extensions.newrelic.hasProperty('version')
         project.extensions.newrelic.hasProperty('name')
         project.extensions.newrelic.hasProperty('libDir')
-        project.extensions.newrelic.hasProperty('disableDefaultJvmArgs')
+        project.extensions.newrelic.hasProperty('loadNewRelicAgent')
     }
 
     def "IllegalStateException should be thrown when application plugin is not applied before NewrelicPlugin"() {

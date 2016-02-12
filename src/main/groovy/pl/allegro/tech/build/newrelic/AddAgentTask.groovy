@@ -8,7 +8,7 @@ class AddAgentTask extends DefaultTask {
 
     @TaskAction
     void addNewrelic() {
-        if (!project.extensions.newrelic.disableDefaultJvmArgs) {
+        if (!project.extensions.newrelic.loadNewRelicAgent) {
             project.applicationDefaultJvmArgs += [
                     '-javaagent:' +
                             project.extensions.newrelic.libDir +

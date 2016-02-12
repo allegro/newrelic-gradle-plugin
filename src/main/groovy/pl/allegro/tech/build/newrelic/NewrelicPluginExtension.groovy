@@ -6,7 +6,7 @@ class NewrelicPluginExtension {
     String version = "3.25.0"
     String name
     String libDir = "../lib/"
-    boolean disableDefaultJvmArgs = false;
+    boolean loadNewRelicAgent = true;
 
     NewrelicPluginExtension() {
     }
