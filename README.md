@@ -15,7 +15,7 @@ buildscript {
          }
     }
     dependencies {
-        classpath group: 'pl.allegro.tech.build', name: 'newrelic-gradle-plugin', version: '0.1.0'
+        classpath group: 'pl.allegro.tech.build', name: 'newrelic-gradle-plugin', version: '0.1.2'
     }
 }
 apply plugin: 'application'
@@ -23,7 +23,7 @@ apply plugin: 'pl.allegro.tech.build.newrelic-gradle-plugin'
 
 newrelic {
     licenseKey '#1231afa2441251asda' //required - newrelic account key
-    version '3.14.0' //optional - default '3.14.0'
+    version '3.25.0' //optional - default '3.25.0'
     name 'AwesomeApp' // optional - module name by default
 }
 ```
