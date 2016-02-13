@@ -46,7 +46,7 @@ class NewrelicPlugin implements Plugin<Project> {
 
         project.tasks.distZip.dependsOn addAgentTask
         project.applicationDistribution.from(extendDistZip) {
-            into "bin"
+            into "lib"
         }
     }
 
