@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/allegro/newrelic-gradle-plugin.svg?branch=master)](https://travis-ci.org/allegro/newrelic-gradle-plugin) 
+
 newrelic-gradle-plugin
 ====
 
