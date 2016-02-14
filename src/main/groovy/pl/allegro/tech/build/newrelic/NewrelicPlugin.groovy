@@ -48,6 +48,12 @@ class NewrelicPlugin implements Plugin<Project> {
         project.applicationDistribution.from(extendDistZip) {
             into "lib"
         }
+
+        project.tasks.startScripts {
+            doLast {
+                unixScript.text = UnixScriptRelativePathHelper.fixUnixScript(unixScript.text)
+            }
+        }
     }
 
 }
