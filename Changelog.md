@@ -1,18 +1,18 @@
 #Changelog
 
 
-## 0.1.2
+## 0.2.0
 New configuration options
 
-libDir = "../lib" # default 
-loadNewRelicAgent = true # default
+agentDir = "../lib" # default 
+loadAgent = true # default
 
 If you're running the application from a different directory the project/bin
 
 ```
 newrelic {
     ...
-    libDir '/fullpath/to/project_dir/lib
+    agentDir '/fullpath/to/project_dir/lib
 }
 ```
 
@@ -21,7 +21,7 @@ To disable changing the DEFAULT_JVM_OPTS use
 ```
 newrelic {
     ...
-    loadNewRelicAgent false
+    loadAgent false
 }
 ```
 newrelic.yml will still be placed in the project/lib/

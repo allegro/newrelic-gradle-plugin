@@ -34,8 +34,21 @@ newrelic {
 ```
 
 ## Advanced Usage
+### Agent configuration
 You can also create an own [newrelic.yml] (https://docs.newrelic.com/docs/agents/java-agent/configuration/java-agent-config-file-template) to configure it as suit you the best.
 Finally this file should be placed on root classpath of your built application.
+
+### Agent directory
+To initialize the agent properly is important to run application from "bin" directory. In some cases this is not possible. Then the path to agent directory needs to be set by *agentDir* option. By default property have “../lib” value.  You can also disable loading agent entirely by *loadAgent* option.   
+```groovy
+newrelic {
+    //...
+    agentDir: "/path/to/agent/directory"
+    loadAgent: true
+    //...
+}
+```
+
 
 ## Requirements
 * newrelic-gradle-plugin must be applied after application plugin.
